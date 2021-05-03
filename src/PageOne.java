@@ -38,4 +38,14 @@ public class PageOne {
             System.out.println("Input passed is more then the String passed");
         }
     }
+    
+    //This is am improved version
+    public void problemTwoBetter(String myString, int rotateBy){
+        if(myString.length() >= rotateBy){
+            int whereWeStop = myString.length() - rotateBy;
+            String rotate = myString.substring(whereWeStop);
+            String stringCutOff = myString.substring(0, whereWeStop);
+            System.out.println(rotate+stringCutOff);
+        }
+    }
 }
