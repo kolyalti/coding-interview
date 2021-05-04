@@ -1,5 +1,5 @@
 public class PageOne {
-
+    //O(N) solution
     public void problemOne(int[] arr, int input){
         int above = 0;
         int below = 0;
@@ -16,7 +16,7 @@ public class PageOne {
         //Print out
         System.out.println("Above: " + above + " Below: " + below);
     }
-
+    //O(N) solution
     public void problemTwo(String myString, int rotateBy){
         StringBuilder rotateSt = new StringBuilder();
         //Starting at the end of the string
@@ -39,7 +39,7 @@ public class PageOne {
         }
     }
     
-    //This is am improved version
+    //This is am improved version O(1) solution 
     public void problemTwoBetter(String myString, int rotateBy){
         //So we don't get out of bound in case rotateBy input passed is more then the myString
         if(myString.length() >= rotateBy){
