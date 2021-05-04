@@ -41,11 +41,18 @@ public class PageOne {
     
     //This is am improved version
     public void problemTwoBetter(String myString, int rotateBy){
+        //So we don't get out of bound in case rotateBy input passed is more then the myString
         if(myString.length() >= rotateBy){
-            int whereWeStop = myString.length() - rotateBy;
-            String rotate = myString.substring(whereWeStop);
-            String stringCutOff = myString.substring(0, whereWeStop);
+            //This will be used below to indicate where we start the cutoff
+            int whereWeStart = myString.length() - rotateBy;
+            //The park that is cut off to place in the back of the string
+            String rotate = myString.substring(whereWeStart);
+            //The second chunk of the string
+            String stringCutOff = myString.substring(0, whereWeStart);
+            //Print out
             System.out.println(rotate+stringCutOff);
+        }else{
+            System.out.println("Input passed is more then the String passed");
         }
     }
 }
